@@ -1,0 +1,61 @@
+<nav class="navbar">
+
+    <h2>AI Smart Support Desk</h2>
+
+    <div>
+
+        <a routerLink="/dashboard">
+            Dashboard
+        </a>
+
+        <a routerLink="/create-ticket">
+            Create Ticket
+        </a>
+
+        <a routerLink="/ticket-list">
+            Tickets
+        </a>
+
+        <a routerLink="/high-priority">
+            High Priority
+        </a>
+
+        <a (click)="logout()">
+            Logout
+        </a>
+
+    </div>
+
+</nav>
+
+<div class="container">
+
+    <h1>High Priority Tickets</h1>
+
+    <div class="card-container">
+
+        @for(ticket of tickets; track ticket.id) {
+
+        <div class="card">
+
+            <h2>{{ ticket.title }}</h2>
+
+            <p>
+                {{ ticket.category }}
+            </p>
+
+            <p>
+                {{ ticket.description }}
+            </p>
+
+            <span>
+                HIGH
+            </span>
+
+        </div>
+
+        }
+
+    </div>
+
+</div>

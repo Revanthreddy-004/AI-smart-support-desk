@@ -1,0 +1,95 @@
+<nav class="navbar">
+
+    <h2>AI Smart Support Desk</h2>
+
+    <div>
+
+        <a routerLink="/dashboard">
+            Dashboard
+        </a>
+
+        <a routerLink="/create-ticket">
+            Create Ticket
+        </a>
+
+        <a routerLink="/ticket-list">
+            Tickets
+        </a>
+
+        <a routerLink="/high-priority">
+            High Priority
+        </a>
+
+        <a (click)="logout()">
+            Logout
+        </a>
+
+    </div>
+
+</nav>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>Create Ticket</h1>
+
+        <input
+            type="text"
+            placeholder="Title"
+            [(ngModel)]="title"
+        >
+
+        <textarea
+            placeholder="Describe the issue"
+            [(ngModel)]="description">
+        </textarea>
+
+        <input
+            type="text"
+            placeholder="Category"
+            [(ngModel)]="category"
+        >
+
+        <select
+            [(ngModel)]="priority"
+        >
+            <option value="">
+                Select Priority
+            </option>
+
+            <option value="LOW">
+                LOW
+            </option>
+
+            <option value="MEDIUM">
+                MEDIUM
+            </option>
+
+            <option value="HIGH">
+                HIGH
+            </option>
+        </select>
+
+        <button
+            (click)="createTicket()"
+        >
+            Submit Ticket
+        </button>
+
+    </div>
+
+</div>
+
+<div
+    class="ai-card"
+    *ngIf="aiResponse"
+>
+
+    <h2>AI Response</h2>
+
+    <pre>
+{{ aiResponse }}
+    </pre>
+
+</div>

@@ -1,0 +1,57 @@
+<nav class="navbar">
+
+    <h2>AI Smart Support Desk</h2>
+
+    <div>
+
+        <a routerLink="/dashboard">
+            Dashboard
+        </a>
+
+        <a routerLink="/create-ticket">
+            Create Ticket
+        </a>
+
+        <a routerLink="/ticket-list">
+            Tickets
+        </a>
+
+        <a routerLink="/high-priority">
+            High Priority
+        </a>
+
+        <a (click)="logout()">
+            Logout
+        </a>
+
+    </div>
+
+</nav>
+
+<h1 class="title">
+    Dashboard
+</h1>
+
+<div class="cards">
+
+    <div class="card total">
+        <h3>Total Tickets</h3>
+        <h1>{{ total }}</h1>
+    </div>
+
+    <div class="card open">
+        <h3>Open Tickets</h3>
+        <h1>{{ open }}</h1>
+    </div>
+
+    <div class="card closed">
+        <h3>Closed Tickets</h3>
+        <h1>{{ closed }}</h1>
+    </div>
+
+    <div class="card high">
+        <h3>High Priority</h3>
+        <h1>{{ high }}</h1>
+    </div>
+
+</div>

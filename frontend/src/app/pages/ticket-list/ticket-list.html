@@ -1,0 +1,132 @@
+<nav class="navbar">
+
+    <h2>AI Smart Support Desk</h2>
+
+    <div>
+
+        <a routerLink="/dashboard">
+            Dashboard
+        </a>
+
+        <a routerLink="/create-ticket">
+            Create Ticket
+        </a>
+
+        <a routerLink="/ticket-list">
+            Tickets
+        </a>
+
+        <a routerLink="/high-priority">
+            High Priority
+        </a>
+
+        <a (click)="logout()">
+            Logout
+        </a>
+
+    </div>
+
+</nav>
+
+<div class="container">
+
+    <h1>All Tickets</h1>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>ID</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Close</th>
+                <th>Delete</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            @for(ticket of tickets; track ticket.id) {
+
+            <tr>
+
+                <td>{{ ticket.id }}</td>
+
+                <td>{{ ticket.title }}</td>
+
+                <td>{{ ticket.category }}</td>
+
+                <td>
+
+                    <span
+                        [class.high]="ticket.priority==='HIGH'"
+                        [class.medium]="ticket.priority==='MEDIUM'"
+                        [class.low]="ticket.priority==='LOW'">
+
+                        {{ ticket.priority }}
+
+                    </span>
+
+                </td>
+
+                <td>
+
+                    <span
+                        [class.open]="ticket.status==='OPEN'"
+                        [class.closed]="ticket.status==='CLOSED'">
+
+                        {{ ticket.status }}
+
+                    </span>
+
+                </td>
+
+                <td>
+
+@if(ticket.status === 'OPEN') {
+
+<button
+    class="close-btn"
+    (click)="closeTicket(ticket.id)">
+    Close
+</button>
+
+} @else {
+
+<button
+    class="closed-btn"
+    disabled>
+    Closed
+</button>
+
+}
+
+                </td>
+
+                <td>
+
+                    <button
+                        class="delete-btn"
+                        (click)="deleteTicket(ticket.id)">
+
+                        Delete
+
+                    </button>
+
+                </td>
+
+            </tr>
+
+            }
+
+        </tbody>
+
+    </table>
+
+</div>

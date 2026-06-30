@@ -1,0 +1,9 @@
+from pydantic import BaseModel
+
+
+class TicketCreate(BaseModel):
+
+    title: str
+    description: str
+    category: str
+    priority: str

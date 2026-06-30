@@ -1,0 +1,16 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# Angular
+node_modules/
+
+# Build folders
+dist/
+
+# VS Code
+.vscode/

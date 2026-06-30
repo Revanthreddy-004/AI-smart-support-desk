@@ -1,0 +1,50 @@
+.navbar {
+    background: #1e293b;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.title {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 220px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px lightgray;
+    text-align: center;
+}
+
+.total {
+    background: #dbeafe;
+}
+
+.open {
+    background: #dcfce7;
+}
+
+.closed {
+    background: #fee2e2;
+}
+
+.high {
+    background: #fef3c7;
+}
