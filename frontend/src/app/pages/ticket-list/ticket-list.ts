@@ -27,7 +27,7 @@ export class TicketList implements OnInit {
       localStorage.getItem('token');
 
     axios.get(
-      'http://localhost:8000/tickets/',
+      'https://ai-smart-support-desk.onrender.com/tickets/',
       {
         headers: {
           Authorization:
@@ -55,7 +55,7 @@ export class TicketList implements OnInit {
       localStorage.getItem('token');
 
     axios.put(
-      `http://localhost:8000/tickets/${id}`,
+      `https://ai-smart-support-desk.onrender.com/tickets/${id}`,
       {},
       {
         headers: {
@@ -80,7 +80,7 @@ export class TicketList implements OnInit {
       localStorage.getItem('token');
 
     axios.delete(
-      `http://localhost:8000/tickets/${id}`,
+      `https://ai-smart-support-desk.onrender.com/tickets/${id}`,
       {
         headers: {
           Authorization:

@@ -21,7 +21,7 @@ export class Register {
   register() {
 
     axios.post(
-      'http://localhost:8000/auth/register',
+      'https://ai-smart-support-desk.onrender.com/auth/register',
       {
         email: this.email,
         password: this.password

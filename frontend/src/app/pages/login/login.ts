@@ -21,7 +21,7 @@ export class Login {
   login() {
 
     axios.post(
-      'http://localhost:8000/auth/login',
+      'https://ai-smart-support-desk.onrender.com/auth/login',
       {
         email: this.email,
         password: this.password

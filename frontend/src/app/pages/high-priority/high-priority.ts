@@ -23,7 +23,7 @@ export class HighPriority implements OnInit {
       localStorage.getItem('token');
 
     axios.get(
-      'http://localhost:8000/tickets/high-priority',
+      'https://ai-smart-support-desk.onrender.com/tickets/high-priority',
       {
         headers: {
           Authorization:

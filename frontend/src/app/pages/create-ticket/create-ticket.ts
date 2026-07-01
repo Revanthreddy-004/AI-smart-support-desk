@@ -39,7 +39,7 @@ export class CreateTicket {
       localStorage.getItem('token');
 
     axios.post(
-      'http://localhost:8000/tickets/',
+      'https://ai-smart-support-desk.onrender.com/tickets/',
       {
         title: this.title,
         description: this.description,

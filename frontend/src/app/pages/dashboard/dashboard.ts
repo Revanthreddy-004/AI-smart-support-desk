@@ -26,7 +26,7 @@ export class Dashboard implements OnInit {
   ngOnInit(): void {
 
     axios.get(
-      'http://localhost:8000/dashboard/analytics'
+      'https://ai-smart-support-desk.onrender.com/dashboard/analytics'
     )
     .then((response) => {
 
