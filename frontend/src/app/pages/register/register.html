@@ -1,35 +1,38 @@
-<div class="container">
+<div class="auth-container">
 
-    <div class="card">
+    <div class="auth-card">
 
         <h1>Register</h1>
 
         <input
+            type="text"
+            placeholder="Username"
+            [(ngModel)]="username">
+
+        <input
             type="email"
             placeholder="Email"
-            [(ngModel)]="email"
-        >
+            [(ngModel)]="email">
 
         <input
             type="password"
             placeholder="Password"
-            [(ngModel)]="password"
-        >
+            [(ngModel)]="password">
 
-        <button
-            (click)="register()"
-        >
+        <select [(ngModel)]="role">
+            <option value="USER">User</option>
+            <option value="ADMIN">Admin</option>
+        </select>
+
+        <button (click)="register()">
             Register
         </button>
 
         <p>
-
             Already have an account?
-
             <a routerLink="/login">
                 Login
             </a>
-
         </p>
 
     </div>
